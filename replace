@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>program to replace a character of a string</title>
+</head>
+<body>
+   <script>
+//Replace first occurance
+    const string = prompt('Enter a string: ');
+// replace the characters
+    const newText = string.replace('r', 'b');
+    console.log(newText);  
+    document.write(newText+"<br>");
+//Replace charcter
+    const regex = /r/g;
+const newText1 = string.replace(regex, 'b');
+// display the result
+console.log(newText1);
+document.write(newText1);
+</script>
+</body>
+</html>
