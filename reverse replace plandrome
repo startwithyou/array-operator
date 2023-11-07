@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> program to reverse,replace a character of a string and check whether entered string is Palindrome in JavaScript </title>
+
+<style>
+	h1 {
+	text-align: center;
+	padding: 100px;
+	background-color: blue;
+	color: white;
+	}
+	
+	.palin {
+	margin: 30px;
+	width: 80%;
+	border: 3px solid rgb(138, 9, 9);
+	border-radius: 5px;
+	padding: 50px;
+	}
+	
+
+	#pa2 {
+	width: 50%;
+	border: 3px solid orangered;
+	border-radius: 5px;
+	padding: 5px;
+	}
+
+    #ra {
+	width: 50%;
+	border: 3px solid orangered;
+	border-radius: 5px;
+	padding: 5px;
+	}
+
+    #rc {
+	width: 50%;
+	border: 3px solid orangered;
+	border-radius: 5px;
+	padding: 5px;
+	}
+	
+	</style>
+
+</head>
+<body>
+
+		<h1> Program to reverse,replace a character of a string and check whether entered string is Palindrome in JavaScript  </h1>
+		<div class="palin">
+		<label> Enter any string or number : </label> 
+		<input id= "pa"> <br> <br>
+        <label> Reverse of a string : </label> 
+		<input id= "ra"> <br> <br>
+        <label> Replace charcter r with b : </label> 
+		<input id= "rc"> <br> <br>
+		<label> Resultant string : </label> 
+		 <input id = "pa2" > </b> <br> 
+         <button onclick= "reverseString();replacestring();palindrome();" >Submit</button> <br> 
+        </div>
+		<script type = "text/javascript">
+        function reverseString()
+        {
+            var a= document.getElementById("pa").value;       
+        
+            var newString = "";
+                for (let i = a.length - 1; i >= 0; i--)
+                    {
+                    newString += a[i];
+                    }
+                document.getElementById("ra"). value = newString + " ";
+        }
+        function replacestring()
+        {
+            var a= document.getElementById("pa").value;  
+            const regex = /r/g;
+            var newText1 = a.replace(regex, 'b');
+            document.getElementById("rc"). value = newText1 + " ";
+        }
+
+		function palindrome()
+		{
+		var a= document.getElementById("pa").value;
+		  // get the total length of the words  
+          
+        var b="";
+            // Use for loop to divide the words into 2 half  
+            for (let i = a.length-1; i >=0; i--)
+            {  
+                b+=a[i];
+            }
+        // validate the first and last characters are same  
+        if (a==b)
+		document.getElementById("pa2"). value = b + " is a Palindrome String ";
+		else
+		document.getElementById("pa2"). value = b + " is not a Palindrome String";
+		}
+
+		</script>
+		</body>
+		</html>
