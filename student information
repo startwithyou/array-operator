@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Information Form</title>
+<script type="text/javascript">
+        function validateForm() {
+            var name = document.forms["studentForm"]["name"].value;
+            var address = document.forms["studentForm"]["address"].value;
+            var city = document.forms["studentForm"]["city"].value;
+            var state = document.forms["studentForm"]["state"].value;
+            var gender = document.forms["studentForm"]["gender"].value;
+            var mobile = document.forms["studentForm"]["mobile"].value;
+            var email = document.forms["studentForm"]["email"].value;
+// Name validation
+            var nameRegex = /^[A-Za-z\s]+$/;
+            if (!name.match(nameRegex)) {
+                alert("Please enter a valid name.");
+                return false;
+            }
+// Mobile validation
+            var mobileRegex = /^[0-9]{10}$/;
+            if (!mobile.match(mobileRegex)) {
+                alert("Please enter a valid 10-digit mobile number.");
+                return false;
+            }
+// Email validation
+            var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+            if (!email.match(emailRegex)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+// Check for empty fields
+            if (name === "" || address === "" || city === "" || state === "" || gender === "" || mobile === "" || email === "") {
+                alert("Please fill out all fields.");
+                return false;
+// If all validations pass, show a welcome message
+            alert("Congratulations! Welcome, " + name + "!");
+        }
+</script>
+</head>
+<body>
+<h1>Student Information Form</h1>
+<form name="studentForm" onsubmit="return validateForm()" method="post">
+<label for="name">Name:</label>
+<input type="text" name="name" required></br></br>
+<label for="address">Address:</label>
+<input type="text" name="address" required></br></br>
+<label for="city">City:</label>
+<input type="text" name="city" required></br></br>
+<label for="state">State:</label>
+<input type="text" name="state" required></br></br>
+<label for="gender">Gender:</label>
+<input type="radio" name="gender" value="Male" required> Male
+<input type="radio" name="gender" value="Female" required> Female</br></br>
+<label for="mobile">Mobile Number:</label>
+<input type="text" name="mobile" required></br></br>
+<label for="email">Email ID:</label>
+<input type="email" name="email" required></br></br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
