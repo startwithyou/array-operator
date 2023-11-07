@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Method1</title>
+  </head>
+  <body>
+    <script>
+      const string1 = "JavaScript Program";
+      const string2 = "javascript program";
+      // compare both strings
+      const result = string1.toUpperCase() === string2.toUpperCase();
+      if (result) {
+        console.log("The strings are similar.");
+        document.write("The strings are similar.");
+      } else {
+        console.log("The strings are not similar.");
+        document.write("The strings are not similar.");
+        a;
+      }
+    </script>
+  </body>
+</html>
