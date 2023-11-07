@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            text-align: center;
+            padding: 30px;
+            background-color: cyan;
+            color: black;
+        }
+        .palin{
+            margin: 30px;
+            width: 80%;
+            border: 3px solid rgb(138, 9, 9);
+            border-radius: 5px;
+            padding: 30px;
+        }
+        #pa2{
+            width: 50%;
+            border: 3px solid orangered;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Palindrome Program in JavaScript</h1>
+    <div class="palin">
+        <label>Enter a String or Number: </label>
+        <input id="pa"><br><br>
+        <label>Resultant String: </label>
+        <input id="pa2"></b><br>
+        <input type="submit" onclick="palindrome()"><br>
+    </div>
+
+    <script>
+        function palindrome()
+        {
+            var a = document.getElementById("pa").value;
+            var b = "";
+            for(let i = a.length-1; i>=0; i--)
+            {
+                b+=a[i]
+            }
+            if (a==b) 
+                document.getElementById("pa2").value = b + " is a palindrome String";
+            else
+                document.getElementById("pa2").value = b + " is not a palindrome String";
+        }
+    </script>
+</body>
+</html>
